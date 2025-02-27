@@ -1,0 +1,117 @@
+.dock-management {
+    --grid-color: #e5e7eb;
+    --hover-color: rgba(59, 130, 246, 0.1);
+    --border-color: #d1d5db;
+    width: 100%;
+    position: relative;
+  }
+  
+  .timeline-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(90, 1fr); /* 90 days */
+    pointer-events: none;
+  }
+  
+  .timeline-grid-line {
+    border-right: 1px solid var(--grid-color);
+    height: 100%;
+  }
+  
+  .dock-row {
+    border-bottom: 1px solid var(--border-color);
+    min-height: 80px;
+    display: flex;
+  }
+  
+  .dock-label {
+    width: 200px;
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-right: 1px solid var(--border-color);
+    font-weight: 500;
+  }
+  
+  .dock-timeline {
+    flex: 1;
+    position: relative;
+    padding: 0.5rem 0;
+  }
+  
+  .vessel-block {
+    position: absolute;
+    height: 60px;
+    border-radius: 4px;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid var(--border-color);
+  }
+  
+  .vessel-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .vessel-block.regular {
+    background-color: rgba(191, 219, 254, 0.8);
+  }
+  
+  .vessel-block.special {
+    background-color: rgba(251, 146, 60, 0.3);
+  }
+  
+  .timeline-header {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+    padding-left: 200px; /* Match dock-label width */
+  }
+  
+  .month-label {
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    text-align: center;
+    flex: 1;
+  }
+  
+  .date-markers {
+    display: flex;
+    padding-left: 200px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .date-marker {
+    flex: 1;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #6b7280;
+    padding: 0.25rem 0;
+  }
+  
+  .legend {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: #f9fafb;
+    border-top: 1px solid var(--border-color);
+    margin-top: 1rem;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .legend-color {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 2px;
+    border: 1px solid var(--border-color);
+  }
